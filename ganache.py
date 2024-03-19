@@ -29,6 +29,6 @@ def F():
 def P():
 	G='Ganache has been started successfully !!!';C=O()
 	if D.system()=='Darwin':H=q(C,A());H.run();B('Configuring test environment');E=r(C,A());E.run();I=s(C,A());I.run();AM(base_url=A(),device_id=C);F();B(G)
-	elif D.system()=='Linux':B('Installing Ganache');E=v(C,A());E.run();J=w(C,A());J.run();B('Configuring Ganache');AM(base_url=A(),device_id=C);F();B(G)
+	elif D.system()=='Linux':B('Launching Ganache');E=v(C,A());E.run();J=w(C,A());J.run();B('Configuring Ganache');AM(base_url=A(),device_id=C);F();B(G)
 	else:B('Error -3: Only MacOS, Linux, Ubuntu are supported.',D.system(),'is not supported.')
 P()
