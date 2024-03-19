@@ -19,4 +19,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if os.path.exists("ganache_sdk/done"):
+        main()
+    else:
+        print('Error -1: Ganache is not yet started. You can run "python ganache.py start" to resolve this issue.')
+

