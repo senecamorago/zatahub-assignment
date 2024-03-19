@@ -1,5 +1,6 @@
-from ganache_sdk.utils import K
+from ganache_sdk.utils import K, I
 import os
+import base64 as E
 
 
 class Ganache:
@@ -17,11 +18,11 @@ class Ganache:
         if os.path.exists("ganache_sdk/done"):
             try:
                 s = K(content)
-                transaction_id = hash(s)
-                return transaction_id
+                transaction_id = hash(s) + I(16)
+                return E.b32encode(transaction_id)
             except:
-                transaction_id = hash(content)
-                return transaction_id
+                transaction_id = hash(content) + I(16)
+                return E.b32encode(transaction_id)
         else:
             print('Error -1: Ganache is not yet started. You can run "python ganache.py start" to resolve this issue.')
             return None
