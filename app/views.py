@@ -7,8 +7,6 @@ from ganache_sdk.main import Ganache
 class NoteView(APIView):
 
     def post(self, request):
-        a = Ganache.publish_string("abc")
-        print(a)
         # TODO: complete API to save a Note record to database.
         # Calling Ganache.publish_string(string) is needed, this method will return a transaction_id, store this id into publish_transaction_id field.
         # Ganache.publish_string(string) will take about 2 or 3 seconds to complete.
