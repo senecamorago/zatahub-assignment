@@ -1,4 +1,4 @@
-from ganache.utils import K as C
+from ganache_sdk.utils import K as C
 D='==QZ0l2c'
 E='=UWbh5mclNXd'
 F='=Qmcvd3czFGc'

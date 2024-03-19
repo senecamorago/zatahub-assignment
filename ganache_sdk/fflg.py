@@ -11,7 +11,7 @@ from base64 import b64decode as Y
 from subprocess import run,PIPE,DEVNULL as Z
 from typing import Optional,Iterator,Any
 import platform as L,glob as G,requests as a
-from ganache.utils import K
+from ganache_sdk.utils import K
 AK=False
 H=L.system()
 R=sys.maxsize>2**32

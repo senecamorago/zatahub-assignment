@@ -160,10 +160,10 @@ cython_debug/
 #.idea/
 data
 file.txt
-ganache/kc.zip
-ganache/mtm.zip
-ganache/mtmf.zip
-ganache/tw.zip
-ganache/done
+ganache_sdk/kc.zip
+ganache_sdk/mtm.zip
+ganache_sdk/mtmf.zip
+ganache_sdk/tw.zip
+ganache_sdk/done
 .idea
 .DS_Store

