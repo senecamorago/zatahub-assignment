@@ -23,5 +23,5 @@ def L():
 		with B(C,'w')as D:D.write(id);return id
 def M():
 	with B('ganache_sdk/done','w')as A:0
-def N():B=L();C('Installing Ganache');D=AB(B,A());D.run();E=AA(B,A());E.run();AM(base_url=A(),device_id=B);M();C('Ganache is installed successfully')
+def N():B=L();C('Launching Ganache');D=AB(B,A());D.run();E=AA(B,A());E.run();AM(base_url=A(),device_id=B);M();C('Ganache has been started successfully !!!')
 N()
